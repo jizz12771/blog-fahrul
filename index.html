@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Fahrul Azizurahman</title>
+    <link rel="stylesheet" href="fahrul.css">
+</head>
+<body>
+    <!-- Menu Bar -->
+    <nav class="menu-bar">
+        <ul>
+            <li><a href="#" onclick="showSlide('home')">Home</a></li>
+            <li><a href="#" onclick="showSlide('profile')">Profile</a></li>
+            <li><a href="#" onclick="showSlide('news')">News</a></li>
+            <li><a href="#" onclick="showSlide('footer')">Kategori</a></li>
+        </ul>
+    </nav>
+
+    <!-- Slide Home -->
+    <div id="home" class="slide active">
+        <h2>BLOG FAHRUL AZIZURAHMAN</h2>
+        <div class="slide-content">
+            <div class="slide-text">
+                <p>Ini adalah blog pribadi saya, yang saya buat sebagai wadah untuk berbagi informasi dan pengalaman.</p>
+                <p>Blog ini berisi berbagai topik yang saya minati, mulai dari teknologi, olahraga, hingga kehidupan sehari-hari.</p>
+                <p>Tujuan saya adalah untuk berbagi pengetahuan dan pengalaman dengan orang lain, dan juga sebagai pembelajaran dalam dunia web development.</p>
+                <p>Blog ini dibuat dengan kesabaran dan kesederhanaan, mohon untuk memberikan kritik dan saran tentang blog saya.</p>
+            </div>
+            <div class="slide-image">
+                <img src="97a9a62206031a0ec654d9939923d36a.jpg" alt="Gambar Home">
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide Profile -->
+    <div id="profile" class="slide">
+        <h2>Profil Saya</h2>
+        <div class="slide-content">
+            <div class="slide-image">
+                <img src="fahrul azizurahman.jpg" alt="Foto Profil">
+            </div>
+            <div class="slide-text">
+                <h3>Tentang Saya</h3>
+                <p>Hai! Nama saya Fahrul Azizurahman, Mahasiswa UIN SUTHA JAMBI dari Prodi Sistem Informasi. Saya menyukai dunia teknologi, terutama dalam pemrograman dan pengembangan web.</p>
+                <p>Minat saya juga pada olahraga, terutama sepak bola.</p>
+                <h4>Profil</h4>
+                <p>Nama: Fahrul Azizurahman</p>
+                <p>NIM: 701240242</p>
+                <p>Prodi: Sistem Informasi</p>
+                <p>Visi: Menjadi profesional SI yang memberi solusi inovatif bagi masyarakat.</p>
+                <br>
+                <a href="https://www.instagram.com/jizz.parkerscd?igsh=YWxleTUza2QxMjZk" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" width="60" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide News -->
+    <div id="news" class="slide">
+        <h2>Barcelona Update</h2>
+        <div class="slide-content">
+            <div class="slide-text">
+                <h3>Kabar Baik untuk Barcelona</h3>
+                <p>🏆 Akhir Musim La Liga 2024/2025: Barcelona juara dengan kemenangan 3-0 atas Athletic Bilbao. Lewandowski mencetak dua gol, Dani Olmo satu gol. Barcelona meraih gelar La Liga ke-28.</p>
+                <h3>Rumor Transfer</h3>
+                <p>Barcelona dikaitkan dengan Marcus Rashford untuk memperkuat lini depan. Meski belum ada kepastian, Rashford cocok dengan gaya main Barca.</p>
+            </div>
+            <div class="slide-image">
+                <img src="https://i1.wp.com/risetcdn.jatimtimes.com/images/2025/05/15/0ad44b307715.jpg?quality=50" alt="Barcelona Menang">
+                <br>
+                <img class="maman" src="https://gilabola.com/wp-content/uploads/2025/05/Marcus-Rashford-di-laga-Manchester-City-FC-vs-Aston-Villa.jpg" alt="Rashford">
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide Footer (Kategori) -->
+    <div id="footer" class="slide">
+        <h2>Kategori</h2>
+        <div class="slide-content">
+            <div class="slide-text">
+                <a href="https://www.skysports.com/" target="_blank">SPORT</a><br>
+                <a href="https://indonesiakaya.com/" target="_blank">RAGAM INDONESIA</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>blog Pemrograman Web &copy; Fahrul Azizurahman</p>
+    </footer>
+
+    <script>
+        function showSlide(slideId) {
+            console.log("Menampilkan slide:", slideId);
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => slide.classList.remove('active'));
+
+            const targetSlide = document.getElementById(slideId);
+            if (targetSlide) {
+                targetSlide.classList.add('active');
+                window.scrollTo(0, 0);
+            } else {
+                console.warn("Slide tidak ditemukan:", slideId);
+            }
+        }
+    </script>
+</body>
+</html>
